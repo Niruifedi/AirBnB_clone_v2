@@ -27,8 +27,7 @@ def c_route(text):
     """
     Prints a message when /c/<text> is called in the url
     """
-    n_text = text.replace('_', ' ')
-    return f'C {n_text}'
+    return 'C ' + text.replace('_', ' ')
 
 
 if __name__ == "__main__":
