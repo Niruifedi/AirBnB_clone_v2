@@ -1,31 +1,31 @@
 #!/usr/bin/python3
 """
-Scripts starts a simple flask application
+Script starts a simple flask application
 """
 from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def hello():
-    """function def for routing"""
+    """
+    Prints a message when / is called in the url
+    """
     return 'Hello HBNB!'
 
 
-@app.route('/hbnb')
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """
-    route for hbnb
-    displays "HBNB'
+    Prints a message when /hbnb is called in the url
     """
     return "HBNB"
 
 
-@app.route('/c/<text>')
+@app.route('/c/<text>', strict_slashes=False)
 def c_route(text):
     """
-    variable routing
-    converts "_" to " " in the display
+    Prints a message when /c/<text> is called in the url
     """
     n_text = text.replace('_', ' ')
     return f'C {n_text}'
