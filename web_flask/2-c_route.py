@@ -23,6 +23,10 @@ def hbnb():
 
 @app.route('/c/<text>')
 def c_route(text):
+    """
+    variable routing
+    converts "_" to " " in the display
+    """
     n_text = text.replace('_', ' ')
     return f'C {n_text}'
 
