@@ -49,7 +49,7 @@ def num(n):
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def num_html(n):
+def num_html(n=None):
     """
     Prints a message when /number_template/<n> is called in the url
     """
