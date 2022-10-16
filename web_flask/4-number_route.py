@@ -45,8 +45,8 @@ def num(n):
     """
     Prints a message when /number/<n> is called in the url
     """
-    return f'{n} is a number'
+    return '{:d} is a number'.format(n)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
