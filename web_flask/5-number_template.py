@@ -53,7 +53,7 @@ def num_html(n=None):
     """
     Prints a message when /number_template/<n> is called in the url
     """
-    return render_template('5-number.html')
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == "__main__":
